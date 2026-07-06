@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad – Luis Alberto Sanguino Hernandez</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0e8;
+    --gray: #888;
+    --light-gray: #d4cfc6;
+    --accent: #1a1a1a;
+    --paper: #ede8dc;
+  }
+ 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+ 
+  body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: 'Courier Prime', monospace;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+ 
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+ 
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.015) 2px, rgba(0,0,0,0.015) 4px);
+    pointer-events: none;
+    z-index: 9998;
+  }
+ 
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--black);
+    border-bottom: 2px solid var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    height: 56px;
+  }
+ 
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    letter-spacing: 4px;
+    text-decoration: none;
+  }
+ 
+  .nav-back {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+ 
+  .nav-back:hover { color: var(--white); }
+ 
+  /* HERO */
+  .page-hero {
+    background: var(--black);
+    padding-top: 56px;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .page-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+ 
+  .page-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 4rem;
+    position: relative;
+    z-index: 2;
+  }
+ 
+  .hero-tag {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gray);
+    border: 1px solid var(--gray);
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .page-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--white);
+    letter-spacing: 4px;
+    line-height: 0.95;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .page-meta {
+    color: var(--gray);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+ 
+  /* CONTENT */
+  .content-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+ 
+  .policy-block {
+    margin-bottom: 3.5rem;
+  }
+ 
+  .block-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .block-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--gray);
+  }
+ 
+  .block-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+  }
+ 
+  .block-text {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: #333;
+  }
+ 
+  .block-text p {
+    margin-bottom: 1rem;
+  }
+ 
+  .block-text ul {
+    margin: 1rem 0 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+ 
+  .block-text li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #444;
+  }
+ 
+  .block-text li::marker {
+    color: var(--gray);
+  }
+ 
+  .block-text strong {
+    color: var(--black);
+    font-weight: 700;
+  }
+ 
+  /* CONTACT BOX */
+  .contact-box {
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 2rem;
+    background: var(--paper);
+    position: relative;
+    margin-top: 1.5rem;
+  }
+ 
+  .contact-box::before {
+    content: '// CONTACTO';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--paper);
+    padding: 0 8px;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--gray);
+  }
+ 
+  .contact-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+ 
+  .contact-row:last-child { border-bottom: none; }
+ 
+  .contact-label {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+ 
+  .contact-val {
+    font-size: 0.9rem;
+    color: var(--black);
+  }
+ 
+  .contact-val a {
+    color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+ 
+  /* LEGAL FOOTER */
+  .legal-footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 2rem 3rem;
+    text-align: center;
+  }
+ 
+  .legal-text {
+    font-size: 0.7rem;
+    color: var(--gray);
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+ 
+  .legal-text strong { color: var(--light-gray); }
+ 
+  footer {
+    background: var(--paper);
+    border-top: 2px solid var(--black);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .footer-copy {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--gray);
+    text-transform: uppercase;
+  }
+ 
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+ 
+  @media (max-width: 768px) {
+    nav { padding: 0 1.5rem; }
+    .page-hero { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .content-wrapper { padding: 3rem 1.5rem; }
+    footer { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+ 
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">L.A.S.H</a>
+  <a href="/" class="nav-back">← Volver al inicio</a>
+</nav>
+ 
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="hero-tag">// Documento legal</div>
+    <h1 class="page-title">Política de<br>Privacidad</h1>
+    <p class="page-meta">Última actualización: 6 de julio de 2026</p>
+  </div>
+</div>
+ 
+<!-- CONTENT -->
+<div class="content-wrapper">
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">01</span>
+      <h2 class="block-title">Responsable</h2>
+    </div>
+    <div class="block-text">
+      <p>
+        El presente sitio web <strong>luissanguino.lat</strong> es operado por 
+        <strong>Luis Alberto Sanguino Hernandez</strong>, identificado con RIF 
+        <strong>V-241495139</strong>, con domicilio en AV Las Pilas, Edif Torre A, Piso 8, Apt 3, 
+        Conjunto Residencial El Alcázar, San Cristóbal, Táchira, Venezuela (Código Postal 5001).
+      </p>
+      <p>
+        Esta Política de Privacidad describe cómo se recopila, utiliza y protege la información 
+        personal que puedas proporcionar al navegar o contactar a través de este sitio web.
+      </p>
+    </div>
+  </div>
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">02</span>
+      <h2 class="block-title">Información que se recopila</h2>
+    </div>
+    <div class="block-text">
+      <p>Este sitio web puede recopilar los siguientes tipos de información:</p>
+      <ul>
+        <li><strong>Información de contacto:</strong> nombre, dirección de correo electrónico y número de teléfono, cuando te comunicas voluntariamente a través de los medios indicados en este sitio.</li>
+        <li><strong>Datos de navegación:</strong> dirección IP, tipo de navegador, páginas visitadas y tiempo de permanencia, recopilados de forma anónima con fines estadísticos.</li>
+        <li><strong>Comunicaciones:</strong> mensajes, consultas o solicitudes que envíes directamente por correo electrónico o WhatsApp.</li>
+      </ul>
+      <p>
+        Este sitio web no utiliza formularios de registro ni almacena datos personales en bases de datos propias.
+      </p>
+    </div>
+  </div>
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">03</span>
+      <h2 class="block-title">Finalidad del tratamiento</h2>
+    </div>
+    <div class="block-text">
+      <p>La información recopilada se utiliza exclusivamente para:</p>
+      <ul>
+        <li>Responder consultas, solicitudes de presupuesto o propuestas de colaboración.</li>
+        <li>Gestionar relaciones comerciales y prestación de servicios de desarrollo web.</li>
+        <li>Mejorar la experiencia de navegación del sitio web.</li>
+        <li>Cumplir obligaciones legales o requerimientos de autoridades competentes cuando corresponda.</li>
+      </ul>
+      <p>No se realizan actividades de marketing masivo ni envío de correos no solicitados (spam).</p>
+    </div>
+  </div>
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">04</span>
+      <h2 class="block-title">Compartición de datos</h2>
+    </div>
+    <div class="block-text">
+      <p>
+        Los datos personales <strong>no se venden, alquilan ni ceden</strong> a terceros con fines comerciales.
+      </p>
+      <p>
+        Únicamente podrán compartirse con terceros cuando sea estrictamente necesario para la prestación 
+        del servicio contratado (por ejemplo, herramientas de comunicación como Gmail o WhatsApp), 
+        o cuando exista una obligación legal que lo requiera.
+      </p>
+    </div>
+  </div>
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">05</span>
+      <h2 class="block-title">Cookies</h2>
+    </div>
+    <div class="block-text">
+      <p>
+        Este sitio web puede utilizar cookies técnicas esenciales para el correcto funcionamiento 
+        de la navegación. No se utilizan cookies de rastreo publicitario ni se comparte información 
+        con redes publicitarias de terceros.
+      </p>
+      <p>
+        Puedes configurar tu navegador para rechazar o eliminar cookies en cualquier momento, 
+        aunque esto podría afectar la experiencia de navegación.
+      </p>
+    </div>
+  </div>
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">06</span>
+      <h2 class="block-title">Seguridad</h2>
+    </div>
+    <div class="block-text">
+      <p>
+        Este sitio web opera bajo el protocolo <strong>HTTPS</strong>, lo que garantiza una conexión 
+        cifrada entre tu navegador y el servidor. Se adoptan medidas razonables para proteger la 
+        información frente a accesos no autorizados, alteración o pérdida.
+      </p>
+    </div>
+  </div>
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">07</span>
+      <h2 class="block-title">Tus derechos</h2>
+    </div>
+    <div class="block-text">
+      <p>Tienes derecho a:</p>
+      <ul>
+        <li>Acceder a los datos personales que hayas proporcionado.</li>
+        <li>Solicitar la corrección de datos inexactos o incompletos.</li>
+        <li>Solicitar la eliminación de tus datos personales.</li>
+        <li>Retirar el consentimiento otorgado en cualquier momento.</li>
+      </ul>
+      <p>Para ejercer cualquiera de estos derechos, puedes contactar directamente:</p>
+ 
+      <div class="contact-box">
+        <div class="contact-row">
+          <span class="contact-label">Responsable</span>
+          <span class="contact-val">Luis Alberto Sanguino Hernandez</span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Correo electrónico</span>
+          <span class="contact-val"><a href="mailto:luis@luissanguino.lat">luis@luissanguino.lat</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Teléfono / WhatsApp</span>
+          <span class="contact-val"><a href="tel:+584120631838">+58 412 063 1838</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Dirección</span>
+          <span class="contact-val">AV Las Pilas, Edif Torre A, Piso 8, Apt 3, San Cristóbal, Táchira, Venezuela</span>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="policy-block">
+    <div class="block-header">
+      <span class="block-num">08</span>
+      <h2 class="block-title">Modificaciones</h2>
+    </div>
+    <div class="block-text">
+      <p>
+        Esta Política de Privacidad puede actualizarse en cualquier momento. Cualquier cambio 
+        será publicado en esta misma página con la fecha de actualización correspondiente. 
+        Se recomienda revisarla periódicamente.
+      </p>
+    </div>
+  </div>
+ 
+</div>
+ 
+<!-- LEGAL FOOTER -->
+<div class="legal-footer">
+  <p class="legal-text">
+    Este sitio web es propiedad y es operado por <strong>Luis Alberto Sanguino Hernandez</strong>, 
+    identificado con RIF <strong>V-241495139</strong>.<br>
+    Domicilio fiscal: AV Las Pilas, Edif Torre A, Piso 8, Apt 3, Conjunto Residencial El Alcázar, 
+    San Cristóbal, Táchira, Venezuela. Código Postal 5001.<br>
+    Teléfono: +58 412 063 1838
+  </p>
+</div>
+ 
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy">© 2026 Luis Alberto Sanguino Hernandez</span>
+  <span class="footer-logo">L.A.S.H</span>
+</footer>
+ 
+</body>
+</html>
